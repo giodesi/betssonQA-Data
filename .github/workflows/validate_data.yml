@@ -38,7 +38,7 @@ jobs:
         git commit -m "Track CSV with LFS" || echo "No changes to commit"
 
     - name: Run validation script
-      run: python app-pro3.py
+      run: python app.py
 
     - name: Commit results
       run: |
