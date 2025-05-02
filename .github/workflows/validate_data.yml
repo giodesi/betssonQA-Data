@@ -15,7 +15,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Needed for git diff and committing back
+        fetch-depth: 0
+        token: ${{ secrets.GH_TOKEN }}  # Add this line
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -29,7 +30,7 @@ jobs:
 
     - name: Run validation script
       run: |
-        python app.py
+        python app-pro3.py
 
     - name: Commit results
       run: |
