@@ -1,0 +1,31 @@
+{
+    "validation_mode": "flag_and_correct",
+    "age": {
+        "min": 18,
+        "max": 100
+    },
+    "purchase_quantity": {
+        "min": 1,
+        "must_be_integer": true
+    },
+    "purchase_amount": {
+        "min": 0,
+        "outlier_detection": true,
+        "outlier_method": "iqr",
+        "outlier_threshold": 1.5
+    },
+    "unit_price": {
+        "min": 0,
+        "outlier_detection": true
+    },
+    "purchase_date": {
+        "no_future_dates": true,
+        "min_date": "2000-01-01"
+    },
+    "email": {
+        "validation_pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    },
+    "customer_id": {
+        "uuid_validation": true
+    }
+}
